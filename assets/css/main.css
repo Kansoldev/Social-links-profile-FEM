@@ -1,8 +1,154 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
+:root {
+  --primary-color: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+/* Andy Bells CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom styles */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 8%);
+}
+
+.profile-card {
+  background-color: hsl(0, 0%, 12%);
+  width: 348px;
+  max-width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 120px;
+  border-radius: 100%;
+}
+
+.profile-name {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.profile-location {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.profile-description {
+  margin: 25px 0;
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 0.875rem;
+}
+
+.profile-links {
+  width: 100%;
+}
+
+.profile-links a {
+  display: block;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 20%);
+  color: var(--white);
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.profile-links a:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.profile-links a:hover {
+  background-color: var(--primary-color);
+  color: hsl(0, 0%, 12%);
 }
